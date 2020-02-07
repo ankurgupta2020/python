@@ -1,0 +1,103 @@
+running notes:
+class is a collection of methods and properties
+
+if ob=null after proper object creation, object will not be destroyed.it will only remove the references.the objects will still float.jvm decides when it'll delete those objects.
+
+destructors delete objects.
+
+protected void finalize()//can also be public. min access specifier must be protected.
+
+static variables are allocated as soon as class is loaded into memory.no need to generate object.They are directly accessible by class name.(eg: Math class)
+
+static blocks cannot access non static variables.
+
+instance block can access static variables, but static block cannot access non static variables
+
+static is not related to object so it can be shared between objects.
+
+class name with package name for object creation is fully qualified name
+
+import static java.lang.Math.*;
+for static import, we don't need to refervariables as 'classname.variable
+instead, we just access variable by variableName.
+
+Access specifiers are only applied to instance variables, not local variables. 
+Rules:
+
+if no constructors are written in a class,the compiler provides default no argument constructor.
+
+INHERITANCE:
+------------------
+
+eMPLOYEE : eID,ename,sal
+Manager:  eID,ename,sal,dept
+engineer:eID,ename,sal,project
+
+Super type: Gathering common properties and behaviourof similar objects.
+            This process is called generalization.
+
+Sub type: having common plus extra special properties and behaviour.
+          This process is calles specialization.
+
+Super type
+public class Employee
+{
+int eid;
+String ename;
+double salary;
+}
+
+Sub type
+public class Manager extends Employee
+{
+String dept;
+}
+
+public class Engineer extends Employee
+{
+String project;
+}
+1. Subtype always belongs to super type.
+
+manager is an employee
+engineer is an employee
+
+This type of relation is called an 'is a' relationship.
+
+Super class for all classes in the world is 'java.lang.Object'
+It is the default super class for any class.
+It doesn't have any argument .
+It MUST be called. If it's not, the compiler adds it automatically.
+Any class constructor by default makes a call to super class default constructor (super) whether or not you mention it.
+private variables cannot be accessed in subclass.
+Calling super class parameterized constructor:It MUST be the first statement.
+
+Superclass method cannot access subclass.
+Superclass type can point to subclass object.
+Eg: 
+
+Employee emp;
+	emp=new Employee(100,"Donna",250000.00);
+
+emp=new Manager(101,"Minamoto",500000.00,"IT");
+	System.out.println(emp);
+
+emp=new Engineer(107,"Junaki",450000.00,"TS");
+	System.out.println(emp);
+
+This is called early binding or compiler binding.
+
+In polymorphism, superclass ref. var. can point to subclass object due to 'is a' relationship. 
+In this situation , only overridden methods can be invoked. subclass method can't be invoked.
+=====================================================================================================================================================================================
+
+OBJECT TYPE CASTING
+--------------------
+	Engineer en=(Engineer)emp;
+
+
+
+
+
+
+ 
