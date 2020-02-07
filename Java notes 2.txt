@@ -1,0 +1,155 @@
+A.java
+package com.data;
+public class A{
+protected int a=25;
+}
+
+B.java
+package com.bean;
+public class B extends com.data.A{
+B(){
+sop(a)
+}
+
+
+O/P: 25
+-----------------------------------
+
+class A{
+A()
+	{
+	Sop ("A");
+	}
+}
+
+class B extends A()
+    B(){
+	Sop ("B");
+	}
+}
+
+class C extends B{
+C()
+	{
+	Sop ("C");
+	}
+}
+
+
+O/P: ABC
+//super() is by default the first line of a subclass unless explicitly mentioned with or without parameters
+
+
+POLYMORPHISM
+
+superclass points to subclass
+
+final class cannot be extended.
+final methods cannot be overridden.
+----------------------------------------
+
+ABSTRACT METHOD
+
+1. method without a body.
+2. only abstract class can have abstract methods.
+3. It is not compulsory for an abstract class to have abstract methods.
+4. an abstract class can also have other normal methods.
+5. Abstract class cannot be instantiated, i.e. it cannot be used to generate objects.
+6. Abstract method must be implemented in subclass.
+7. If you don't implement abstract method in subclass, then declare subclass also as an abstract class.
+   i.e. an abstract class can extend another abstract class.
+8. Shape s=new Circle()
+   This can only be done when the object is used with overloaded functions.
+
+INTERFACES
+-----------
+
+Interfaces are called pure abstract class
+It is a collection of abstract methods and constants, i.e, the variables are static and final by default.
+Interface methods are by default abstract.
+It is used to create common functionality between related and also unrelated classes.
+Multiple inheritance is not supproted in java. i.ie. you can't extend more than one class.
+It can't have a constructor or a normal method.
+'implement' forces subclass to run abstract class methods.
+Method body MUST be present in abstract class in the interface.
+Interface also can't be instantiated.
+Polymorphism is possible,i.e. Interface ref. can point to implemented object. 
+one interface can 'extend' another interface.
+
+jdk 1.8 onwards, interface can have static method and default method, not non static concrete method. concrete method must be concrete.
+default method can be OPTIONALLY implemented in a class.
+static method is never and can never implemented.
+
+interface should be created to list down common functionality between unrelated classes
+
+		Animal						vehicle
+	mammal		bird				car	plane	train
+ 					Flyer
+
+
+class bird extends mammal implements flyer{
+//contents here
+}
+=====================================================================================================================================================================================E
+
+EXCEPTION HANDLING
+-------------------
+
+Throwable
+
+1. Exception:
+   a. Runtime error
+	- ArithmeticException
+	- ArrayIndexOutOfBoundsException
+	- NumberFormatException
+   b. IOException
+   c. SQLExcepttion
+
+2. Error
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RuntimeException and their subclasses are called unchecked exception. Remaining are checked exceptions.
+
+
+exceptions which occur while executing a program or directly at runtime are called unchecked exceptions.
+
+checked exceptions are verified at compile time.
+
+finally block always executes... needs a try block, catch block optional
+Always close resources in finally block.
+
+====================================================================================================================================================================================
+
+
+1nt a=100;
+float b=a;
+
+double pi=3.14;
+int a=(int)pi;//primitive type casting
+
+Object o=new String("aaa");//upcasting
+also read downcasting
+====================================================================================================================================================================================
+
+WRAPPER CLASSES
+-----------------
+
+int a=0;
+Integer ob=new Integer(a);//wrapper class //boxing
+int x=ob.intValue();//boxing
+
+jdk 1.5 onwards:
+
+int a=100;
+Integer ob=a; // autoboxing
+int x=ob; //autounboxing.
+
+====================================================================================================================================================================================
+
+STRING CLASS
+--------------
+
+String is an immutable object.
+
+
+
