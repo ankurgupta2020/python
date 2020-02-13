@@ -1,0 +1,10 @@
+Defined below requirements to the participants of mini project
+1.	UNIX shell scripts which will load data into HDFS from local file systems with all type of Validations.
+2.	Create data model for given Source files.
+3.	Create dimension and fact tables using Hive.
+4.	Load data into respective dimension tables created using Hive.
+5.	Back up Hive tables into MySQL using Sqoop export.
+6.	Analysis using Hive and Spark.
+
+During Talend Training I have shared old ETL mini projects with the requirements documents. 
+
